@@ -21,7 +21,7 @@ export default class UserActionsComponent extends React.PureComponent {
             <div>
                 <FormattedMessage
                     id='useractions.demo'
-                    defaultMessage='Demo Plugin: '
+                    defaultMessage='XLKN Plugin: '
                 />
                 <button
                     style={style.button}

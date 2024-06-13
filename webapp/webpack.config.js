@@ -1,4 +1,5 @@
 var path = require('path');
+const PLUGIN_ID = require('../plugin.json').id;
 
 module.exports = {
     entry: [
@@ -26,6 +27,23 @@ module.exports = {
                     },
                 },
             },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sassOptions: {
+                                includePaths: ['node_modules/compass-mixins/lib', 'sass'],
+                            },
+                        },
+                    },
+                ],
+            },
         ],
     },
     externals: {
@@ -43,4 +61,5 @@ module.exports = {
         publicPath: '/',
         filename: 'main.js',
     },
+   
 };

@@ -1,52 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
+import Button from '../../widget/buttons/button';
+import CompassIcon from '../icons/compassIcons';
+import { Form, Input, Modal, Popover, Select, Table, notification } from 'antd';
+import StaffView from './staff_view';
 
-import {FormattedMessage} from 'react-intl';
 
-export default class RHSView extends React.PureComponent {
-    static propTypes = {
-        team: PropTypes.object.isRequired,
-    }
+const RHSView = (props) => {
+    const [viewIndex, setViewIndex] = useState(0);
 
-    render() {
-        return (
-            <div style={style.rhs}>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <FormattedMessage
-                    id='rhs.triggered'
-                    defaultMessage='You have triggered the right-hand sidebar component of the demo plugin.'
-                />
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <FormattedMessage
-                    id='demo.testintl'
-                    defaultMessage='This is the default string'
-                />
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                {'Links for custom routes'}
-                <br/>
-                <a onClick={() => window.WebappUtils.browserHistory.push('/plug/com.mattermost.demo-plugin/roottest')}>
-                    {'/plug/com.mattermost.demo-plugin/roottest'}
-                </a>
-                <br/>
-                <a onClick={() => window.WebappUtils.browserHistory.push(`/${this.props.team.name}/com.mattermost.demo-plugin/teamtest`)}>
-                    {`/${this.props.team.name}/com.mattermost.demo-plugin/teamtest`}
-                </a>
-            </div>
-        );
-    }
+    return (
+        <div>
+            <StaffView />
+        </div>
+    );
 }
 
 const style = {
     rhs: {
         padding: '10px',
     },
+    table: {
+        marginTop: '10px',
+    },
 };
+
+
+export default RHSView;

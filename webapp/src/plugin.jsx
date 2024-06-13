@@ -62,7 +62,7 @@ export default class DemoPlugin {
             RHSView,
             <FormattedMessage
                 id='plugin.name'
-                defaultMessage='Demo Plugin'
+                defaultMessage='XLKN Plugin'
             />);
 
         registry.registerChannelHeaderButtonAction(
@@ -70,7 +70,7 @@ export default class DemoPlugin {
             () => store.dispatch(toggleRHSPlugin),
             <FormattedMessage
                 id='plugin.name'
-                defaultMessage='Demo Plugin'
+                defaultMessage='XLKN Plugin'
             />,
         );
 
@@ -80,7 +80,7 @@ export default class DemoPlugin {
         registry.registerMainMenuAction(
             <FormattedMessage
                 id='plugin.name'
-                defaultMessage='Demo Plugin'
+                defaultMessage='XLKN Plugin'
             />,
             () => store.dispatch(mainMenuAction()),
             <MainMenuMobileIcon/>,
@@ -89,7 +89,7 @@ export default class DemoPlugin {
         registry.registerChannelHeaderMenuAction(
             <FormattedMessage
                 id='plugin.name'
-                defaultMessage='Demo Plugin'
+                defaultMessage='XLKN Plugin'
             />,
             (channelId) => store.dispatch(channelHeaderMenuAction(channelId)),
             <MainMenuMobileIcon/>,
@@ -119,7 +119,7 @@ export default class DemoPlugin {
         registry.registerPostDropdownMenuAction(
             <FormattedMessage
                 id='plugin.name'
-                defaultMessage='Demo Plugin'
+                defaultMessage='XLKN Plugin'
             />,
             () => store.dispatch(postDropdownMenuAction()),
         );

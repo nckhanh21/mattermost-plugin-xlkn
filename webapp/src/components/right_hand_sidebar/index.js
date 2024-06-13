@@ -11,4 +11,23 @@ const mapStateToProps = (state) => ({
     team: getCurrentTeam(state),
 });
 
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators({
+            // remove,
+            // complete,
+            // accept,
+            // bump,
+            list,
+            openAddCard,
+            closeAddCard,
+            // openAssigneeModal,
+            // telemetry,
+            setVisible: setRhsVisible,
+        }, dispatch),
+    };
+}
+
+
+
 export default connect(mapStateToProps)(RHSView);

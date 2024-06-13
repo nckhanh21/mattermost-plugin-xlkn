@@ -1,7 +1,7 @@
 {
-    "id": "com.mattermost.demo-plugin",
-    "name": "Demo Plugin",
-    "description": "This plugin demonstrates the capabilities of a Mattermost plugin.",
+    "id": "mattermost-plugin-xlkn",
+    "name": "Plugin XLKN",
+    "description": "This is XLKN plugin",
     "homepage_url": "https://github.com/mattermost/mattermost-plugin-demo",
     "support_url": "https://github.com/mattermost/mattermost-plugin-demo/issues",
     "icon_path": "assets/icon.svg",
